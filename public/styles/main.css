@@ -1,0 +1,490 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#topics {
+    margin-bottom: 30px;
+}
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.topic-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px; /* Increased roundness */
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.topic-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); /* Enhanced light white shadow */
+}
+
+.topic-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+    box-shadow: 0 3px 3px rgb(255, 255, 255); /* Enhanced light white shadow */
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+#youtube-courses {
+    text-align: center;
+    padding: 40px;
+    background-color: #121212;
+    margin-top: 20px; /* Ensure margin-top is set */
+}
+
+#youtube-courses h3 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+#youtube-course-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#youtube-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+#youtube-links li {
+    max-width: 320px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgb(255, 255, 255); /* Light white shadow */
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+
+#youtube-links li:hover {
+    box-shadow: 0 8px 16px rgb(255, 255, 255); /* Enhanced light white shadow */
+}
+
+#youtube-links iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+}
+
+.course-info {
+    padding: 20px;
+}
+
+.course-info h4 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 0 15px;
+}
+
+.course-info p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+#language-details {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+}
+
+#youtube-courses {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#youtube-courses h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#youtube-courses p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+#youtube-courses iframe {
+    border: none;
+    border-radius: 15px; 
+    max-width: 100%;
+}
+
+footer {
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+    margin-top: 20px;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-content a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content img {
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+}
+
+.footer-content hr {
+    border: 1px solid #444;
+    margin: 20px 0;
+}
+
+.footer-content div {
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.educational-site-link {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.educational-site-link:hover {
+    background-color: #555;
+    transform: scale(1.1);
+    box-shadow: 0 3px 3px rgb(255, 255, 255); /* Enhanced light white shadow */
+}
+
+.code-block {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.code-block pre {
+    margin: 0;
+    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+}
+
+.copy-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #555;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 30px 30px 30px;
+}
+
+.footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer .footer-section p,
+.footer .footer-section a {
+    font-size: 15px;
+    color: #bbb;
+    text-decoration: none;
+    line-height: 28px;
+}
+
+.footer .footer-section a:hover {
+    color: #fff;
+}
+
+.footer .bottom-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.footer .bottom-links .links a {
+    margin-right: 20px;
+    color: #bbb;
+    font-size: 15px;
+}
+
+.footer .bottom-links .links a:hover {
+    color: #fff;
+}
+
+.footer .social-icons a {
+    color: #bbb;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.footer .social-icons a:hover {
+    color: #25D366;
+}
+
+.footer .social-icons .github:hover {
+    color: #fff;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 10px; /* Always visible when displayed */
+    background: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    font-size: 18px; /* Larger icon size */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: none; /* Initially hidden */
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slightly more visible on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hide/show */
+}
+
+#header h1 {
+    margin-left: 10%; /* Add left margin to title text */
+}
+
+#header.hide {
+    transform: translateY(-100%); /* Slide up */
+    opacity: 0; /* Fully hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+#header.show {
+    transform: translateY(0); /* Slide down */
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Allow interaction when visible */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Dark gray thumb */
+    border-radius: 10px; /* Rounded edges */
+    border: 2px solid #333; /* Border for better contrast */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Lighter gray on hover */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f; /* Darker track background */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.learning-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.learning-box h3 {
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.learning-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.learning-box ul li {
+    margin-bottom: 10px;
+}
+
+.code-box {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.code-box h4 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.code-box pre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#youtube-course-content div p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.youtube-video-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.youtube-video-container h4 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.youtube-video-container .video-about {
+    color: #bbb;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.youtube-video-container iframe {
+    border-radius: 10px;
+    max-width: 100%;
+}

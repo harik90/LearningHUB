@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Details</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+        <h1 id="topic-title"><i class="fas fa-book icon"></i> Topic Details</h1>
+    </header>
+    <main>
+        <section id="topic-content">
+            <div id="code-explanation">
+                <h2>Code Explanation</h2>
+                <p>Loading...</p>
+            </div>
+            <div id="code-examples">
+                <h2>Code Examples</h2>
+                <div class="code-block">
+                    <pre><code id="code-snippet">Loading...</code></pre>
+                    <button class="copy-btn" onclick="copyCode('code-snippet')">Copy Code</button>
+                </div>
+            </div>
+            <div id="youtube-courses">
+                <h2>Related YouTube Courses</h2>
+                <div id="youtube-course-content" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+                    <!-- YouTube courses will be dynamically loaded here -->
+                    <!-- Each course will include a title, about text, and an embedded video -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px;">
+          <div style="flex:1; min-width:250px;">
+            <h3 style="color:#fff; font-size:20px; margin-bottom:20px;">Developer</h3>
+           
+            <h1 style="color:#0055ff; font-size:30px; margin-bottom:5px;">Harik Gond</h1>
+            <p style="color:#7b7b7b; font-size:14px; margin-bottom:5px;">Always ready to learn and work on new technologies to deliver the best results.
+              Feel free to contact me for any development work, projects, or collaborations.
+              Thanks for visiting my site!</p>
+  
+          </div>
+      
+          <div style="flex:1; min-width:250px;">
+            <h3 style="color:#fff; font-size:20px; margin-bottom:20px;">Contact</h3>
+            <p style="color:#bbb; font-size:15px; line-height:10px;">
+              <a href="https://wa.link/ylwtoy" target="_blank" style="color:#bbb; text-decoration:none;">
+                <i class="fab fa-whatsapp" style="margin-right:10px;"></i> WhatsApp
+              </a><br><br>
+              <a href="https://github.com/YourGitHubUsername" target="_blank" style="color:#bbb; text-decoration:none;">
+                <i class="fab fa-github" style="margin-right:10px;"></i> GitHub
+              </a><br><br>
+            
+            </p>
+          </div>
+        </div>
+      
+        <hr style="border:1px solid #333; margin:30px 0;">
+      
+        <p style="color:#bbb; font-size:13px; margin-top:10px;">© 2025 Developer. All rights reserved.</p>
+      </footer>
+      
+    <script src="scripts/topic.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>

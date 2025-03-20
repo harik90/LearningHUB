@@ -1,0 +1,32 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "A web application that provides tutorials on various programming languages with a material design interface.",
+  "main": "src/App.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "keywords": [
+    "web",
+    "programming",
+    "tutorials",
+    "material-design"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.14.0",
+    "prettier": "^2.2.1",
+    "jest": "^26.6.0"
+  }
+}
