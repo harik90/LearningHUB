@@ -49,4 +49,4 @@ Fork the repository and submit your pull request!
 
 ## 📥 Download / Clone
 ```bash
-git clone https://github.com/yourusername/learning-hub.git
+git clone https://github.com/harik90/LearningHUB.git
