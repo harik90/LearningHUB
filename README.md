@@ -16,6 +16,13 @@ Welcome to the **Open Source Computer Science Learning Hub** — a curated platf
 
 ## 📸 Site Preview
 
+| Basics Code | Best Courses | Example |
+|------------|-------------|--------|
+| ![Basics Code](https://github.com/harik90/LearningHUB/blob/main/screenshots/basicscode.png?raw=true) | ![Best Courses](https://github.com/harik90/LearningHUB/blob/main/screenshots/bestcourses.png?raw=true) | ![Example](https://github.com/harik90/LearningHUB/blob/main/screenshots/example.png?raw=true) |
+
+| Notes | Topics | Top Sites |
+|------|--------|----------|
+| ![Notes](https://github.com/harik90/LearningHUB/blob/main/screenshots/notes.png?raw=true) | ![Topics](https://github.com/harik90/LearningHUB/blob/main/screenshots/topic.png?raw=true) | ![Top Sites](https://github.com/harik90/LearningHUB/blob/main/screenshots/topsites.png?raw=true) |
 
 ---
 
