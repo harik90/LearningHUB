@@ -6,10 +6,10 @@
     <title>Topic Details</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
     <header id="header">
-        <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
         <h1 id="topic-title"><i class="fas fa-book icon"></i> Topic Details</h1>
     </header>
     <main>
@@ -21,10 +21,11 @@
             <div id="code-examples">
                 <h2>Code Examples</h2>
                 <div class="code-block">
-                    <pre><code id="code-snippet">Loading...</code></pre>
+                    <pre><code id="code-snippet" class="language-python">Loading...</code></pre>
                     <button class="copy-btn" onclick="copyCode('code-snippet')">Copy Code</button>
                 </div>
             </div>
+            
             <div id="youtube-courses">
                 <h2>Related YouTube Courses</h2>
                 <div id="youtube-course-content" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
@@ -35,27 +36,28 @@
         </section>
     </main>
     <footer>
-        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px;">
-          <div style="flex:1; min-width:250px;">
-            <h3 style="color:#fff; font-size:20px; margin-bottom:20px;">Developer</h3>
-           
-            <h1 style="color:#0055ff; font-size:30px; margin-bottom:5px;">Harik Gond</h1>
-            <p style="color:#7b7b7b; font-size:14px; margin-bottom:5px;">Always ready to learn and work on new technologies to deliver the best results.
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; text-align:center;">
+          <div style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">
+            <h3 style="color:#a9a9a9; font-size:22px; margin-bottom:-30px;">Developer</h3>
+            <h1 style="color:#0055ff; font-size:35px; margin-bottom:5px;">ANON</h1>
+            <p style="color:#7b7b7b; font-size:14px; margin-bottom:5px; text-align:center;">
+              Always ready to learn and work on new technologies to deliver the best results.
               Feel free to contact me for any development work, projects, or collaborations.
-              Thanks for visiting my site!</p>
-  
+              Thanks for visiting my site!
+            </p>
           </div>
-      
-          <div style="flex:1; min-width:250px;">
-            <h3 style="color:#fff; font-size:20px; margin-bottom:20px;">Contact</h3>
-            <p style="color:#bbb; font-size:15px; line-height:10px;">
-              <a href="https://wa.link/ylwtoy" target="_blank" style="color:#bbb; text-decoration:none;">
+          <div style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">
+            <h3 style="color:#a9a9a9; font-size:22px; margin-bottom:-30px;">Contact</h3>
+            <p style="font-size:15px; line-height:25px; color:#a9a9a9;">
+              <a href="https://wa.link/ylwtoy" target="_blank" style="color:#a9a9a9; text-decoration:none;">
                 <i class="fab fa-whatsapp" style="margin-right:10px;"></i> WhatsApp
-              </a><br><br>
-              <a href="https://github.com/YourGitHubUsername" target="_blank" style="color:#bbb; text-decoration:none;">
+              </a><br>
+              <a href="https://github.com/YourGitHubUsername" target="_blank" style="color:#a9a9a9; text-decoration:none;">
                 <i class="fab fa-github" style="margin-right:10px;"></i> GitHub
-              </a><br><br>
-            
+              </a><br>
+              <a href="https://pin.it/SDeB1nv4r" target="_blank" style="color:#a9a9a9; text-decoration:none;">
+                <i class="fab fa-pinterest" style="margin-right:10px;"></i> Pinterest
+              </a>
             </p>
           </div>
         </div>
@@ -67,5 +69,7 @@
       
     <script src="scripts/topic.js"></script>
     <script src="scripts/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>

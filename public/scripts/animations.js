@@ -105,27 +105,66 @@ fun main() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const backButton = document.querySelector(".back-btn");
     const header = document.getElementById("header");
     let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down
+                    header.classList.add("hide");
+                    header.classList.remove("show");
+                } else {
+                    // Scrolling up
+                    header.classList.remove("hide");
+                    header.classList.add("show");
+                }
+                
+                lastScrollY = currentScrollY;
+                ticking = false;
+            });
+            
+            ticking = true;
+        }
+    });
+
+    // Add smooth scroll behavior to all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerOffset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // Handle topic button clicks
+    document.querySelectorAll('.topic-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
 
     // Ensure the back button is visible initially if not on the home page
     if (!window.location.pathname.includes("index.html")) {
         backButton.style.display = "block";
     }
-
-    // Optimize header hide/show animation based on scroll direction
-    window.addEventListener("scroll", () => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > 100) {
-            header.classList.toggle("hide", currentScrollY > lastScrollY);
-            header.classList.toggle("show", currentScrollY <= lastScrollY);
-        } else {
-            header.classList.add("show");
-            header.classList.remove("hide");
-        }
-        lastScrollY = currentScrollY;
-    });
 
     // Back button click event to navigate back
     backButton.addEventListener("click", () => {
@@ -136,4 +175,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.location.pathname.includes("index.html")) {
         backButton.style.display = "none";
     }
+
+    // Add scroll progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(to right, #4CAF50, #8BC34A);
+        z-index: 1001;
+        transition: width 0.2s ease;
+    `;
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+    });
 });
