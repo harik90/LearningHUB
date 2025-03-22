@@ -88,7 +88,7 @@ async function generateAIResponse(message) {
 }
 
 async function fetchAIResponse(message) {
-  const apiKey = 'AIzaSyCH_ZRWh4Mc2AFybOJUKtKoUa6eicNv0Tg';
+  const apiKey = 'ADD_YOUR_API_KEY';
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
   const controller = new AbortController();
