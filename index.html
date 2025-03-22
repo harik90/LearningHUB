@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Hub</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: #4CAF50;
+      }
+
+      25% {
+        color: #FF5722;
+      }
+
+      50% {
+        color: #FFC107;
+      }
+
+      75% {
+        color: #03A9F4;
+      }
+
+      100% {
+        color: #4CAF50;
+      }
+    }
+
+    .typing-title {
+      display: inline-block;
+      font-size: 2.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      animation: typing 4s steps(30, end), blink 0.5s step-end infinite, colorChange 4s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1 class="typing-title">Welcome to the Programming Hub</h1>
+    <p style="color: #a9a9a9;">Your go-to resource for learning various programming languages.</p>
+  </header>
+  <main>
+    <section id="topics">
+      <div style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
+        <a href="meghla_ai.html" class="try-meghla-btn">Try Meghla AI</a>
+      </div>
+      <h1 style="color: #a9a9a9;text-align: center;">Select a Topic</h1>
+      <div class="topic-list" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+        <a href="topic.html?topic=hacking" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fas fa-user-secret"></i> Hacking Basics
+        </a>
+        <a href="topic.html?topic=cmd" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fas fa-terminal"></i> Command Line
+        </a>
+        <a href="topic.html?topic=cpp" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fab fa-cpp"></i> C++ Basics
+        </a>
+        <a href="topic.html?topic=csharp" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fab fa-microsoft"></i> C# Basics
+        </a>
+        <a href="topic.html?topic=java" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fab fa-java"></i> Java Basics
+        </a>
+        <a href="topic.html?topic=python" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fab fa-python"></i> Python Basics
+        </a>
+        <a href="topic.html?topic=kotlin" class="topic-btn"
+          style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+          <i class="fab fa-android"></i> Kotlin Basics
+        </a>
+      </div>
+      <div class="notes-list" style="margin-top: 30px; text-align: center;">
+        <h2 style="color: #a9a9a9;">Download Notes</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-html5"></i> HTML Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-python"></i> Python Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Java_Complete_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-java"></i> Java Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/C_Complete_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-c"></i> C Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Android_CompleteNotes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-android"></i> Android Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/CSS_Complete_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-css3-alt"></i> CSS Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/JS_Chapterwise_Notes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-js"></i> JavaScript Notes
+          </a>
+          <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/DSA_CompleteNotes.pdf" download
+            class="notes-btn"
+            style="padding: 15px 30px; font-size: 1.1em; min-width: 180px; text-align: center; color: #888;">
+            <i class="fab fa-java"></i> DSA Notes
+          </a>
+
+
+
+          
+        </div>
+      </div>
+    </section>
+    <section id="cs-educational-sites"
+      style=" color: #888; padding: 20px; text-align: center; font-family: Arial, sans-serif; ">
+      <h3 style="margin-bottom: 20px; font-size: 24px; text-transform: uppercase; letter-spacing: 1px;">Top Computer
+        Science Educational Sites</h3>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+        <a href="https://www.coursera.org" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-graduation-cap"></i> Coursera<br><small style="color: #666;">Online courses from top
+            universities</small>
+        </a>
+        <a href="https://www.codewithharry.com/" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-code"></i> Code with Harry<br><small style="color: #666;">All of the best Free courses from
+            code with harry site</small>
+        </a>
+        <a href="https://www.edx.org" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-university"></i> edX<br><small style="color: #666;">Free and paid courses from leading
+            institutions</small>
+        </a>
+        <a href="https://www.udemy.com" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-laptop-code"></i> Udemy<br><small style="color: #666;">Affordable courses on various
+            topics</small>
+        </a>
+        <a href="https://www.khanacademy.org" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-book-reader"></i> Khan Academy<br><small style="color: #666;">Free educational resources for
+            all levels</small>
+        </a>
+        <a href="https://www.freecodecamp.org" target="_blank" class="educational-site-link" style="color: #888;">
+          <i class="fas fa-campground"></i> freeCodeCamp<br><small style="color: #666;">Learn to code for free</small>
+        </a>
+      </div>
+    </section>
+    <section id="youtube-courses">
+      <h3 style="font-size: 32px; color: #fff; margin-bottom: 40px;">Top YouTube Courses</h3>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/8DvywoWv6fI" title="CS50 - Harvard"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">CS50 - Harvard</h4>
+            <p style="font-size: 15px; color: #aaa;">Comprehensive computer science fundamentals by Harvard.</p>
+          </div>
+        </div>
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/lfmg-EJ8gm4"
+            title="Python Full Course - BroCode" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Python Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">Python Programming - Beginner to Advanced - BroCode.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/zOjov-2OZ0E"
+            title="Data Structures Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Data Structures</h4>
+            <p style="font-size: 15px; color: #aaa;">Full Data Structures & Algorithms Course.</p>
+          </div>
+        </div>
+
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/qiQR5rTSshw?si=3HxP5mUIvdZtb9nn"
+            title="Computer Networks Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Computer Networks</h4>
+            <p style="font-size: 15px; color: #aaa;">Full Computer Networking course for beginners - Gate Smashers.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/yK1uBHPdp30?si=rO__jgVMSIbdVcxN"
+            title="Operating System Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Operating System</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete OS course for beginners - KnowledgeGate.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/qz0aGYrrlhU"
+            title="JavaScript Full Course - Programming with Mosh" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">JavaScript Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete JavaScript tutorial by Programming with Mosh.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/_t2GVaQasRY"
+            title="System Design Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">System Design</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete System Design simplified by Apna College.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/CYbYvImd7Bw"
+            title="Cyber Security Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Cyber Security</h4>
+            <p style="font-size: 15px; color: #aaa;">Cyber Security Full Course for Beginners - Great Learning.</p>
+          </div>
+        </div>
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/Ke90Tje7VS0" title="React JS Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">React JS Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">Full React JS Course by freeCodeCamp.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/-caxhMlw_04" title="SQL Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">SQL Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">SQL Database Crash Course - FreeCodeCamp.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/OZIRAavoGng" title="Java Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Java Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete Java Tutorial - BroCode.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/9zKuYvjFFS8" title="Linux for Beginners"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Linux For Beginners</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete Linux Tutorial for Beginners.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/1Rs2ND1ryYc"
+            title="HTML & CSS Full Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">HTML & CSS Full Course</h4>
+            <p style="font-size: 15px; color: #aaa;">Full Front-End Design HTML5 & CSS3 Course.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/f4fB9Xg2JEY"
+            title="Machine Learning Crash Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Machine Learning</h4>
+            <p style="font-size: 15px; color: #aaa;">Machine Learning Crash Course - FreeCodeCamp.</p>
+          </div>
+        </div>
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/RBSGKlAvoiM"
+            title="Computer Science Crash Course" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Computer Science Crash</h4>
+            <p style="font-size: 15px; color: #aaa;">Quick overview of computer science fundamentals.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/grEKMHGYyns" title="Java Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Java Programming</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete Java programming from basics to advanced.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="C++ Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">C++ Programming</h4>
+            <p style="font-size: 15px; color: #aaa;">Master C++ programming in this full course.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/8cm1x4bC610" title="C# Full Course"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">C# Programming</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete C# programming for beginners & advanced.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/1OpAgZvYXLQ" title="Advanced Python"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Advanced Python</h4>
+            <p style="font-size: 15px; color: #aaa;">Master advanced Python programming concepts.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/3u1fu6f8Hto" title="Kotlin for Android"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Kotlin for Android</h4>
+            <p style="font-size: 15px; color: #aaa;">Learn Kotlin for Android app development.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/Eu35xM76kKY"
+            title="Data Structures in Java" frameborder="0" allowfullscreen
+            style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">DSA in Java</h4>
+            <p style="font-size: 15px; color: #aaa;">Data Structures and Algorithms with Java.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/VPvVD8t02U8?si=1jwt8MOWuAH2HP9M"
+            frameborder="0" allowfullscreen></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Flutter Development</h4>
+            <p style="font-size: 15px; color: #aaa;">Complete Flutter app development tutorial.</p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: #111; border-radius: 20px; overflow: hidden; width: 320px; box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);">
+          <iframe width="100%" height="180" src="https://www.youtube.com/embed/L3LMbpZIKhQ" title="Mathematics for CS"
+            frameborder="0" allowfullscreen style="border-radius: 20px 20px 0 0;"></iframe>
+          <div style="padding: 20px;">
+            <h4 style="font-size: 20px; color: #fff;">Mathematics for CS</h4>
+            <p style="font-size: 15px; color: #aaa;">Discrete Mathematics essentials for Computer Science.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- Floating bot button -->
+  <button id="floating-bot-btn" class="floating-btn">
+    <i class="fas fa-robot" style="font-size: 24px;"></i>
+  </button>
+
+  <script>
+    // Make the floating button movable within the screen
+    const floatingBtn = document.getElementById('floating-bot-btn');
+    let isDragging = false, offsetX, offsetY;
+
+    floatingBtn.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - floatingBtn.getBoundingClientRect().left;
+      offsetY = e.clientY - floatingBtn.getBoundingClientRect().top;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const btnWidth = floatingBtn.offsetWidth;
+        const btnHeight = floatingBtn.offsetHeight;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        let left = e.clientX - offsetX;
+        let top = e.clientY - offsetY;
+
+        // Restrict movement within the screen
+        left = Math.max(10, Math.min(screenWidth - btnWidth - 10, left));
+        top = Math.max(10, Math.min(screenHeight - btnHeight - 10, top));
+
+        floatingBtn.style.left = `${left}px`;
+        floatingBtn.style.top = `${top}px`;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Open meghla_ai.html in a popup on click
+    floatingBtn.addEventListener('click', () => {
+      const popup = window.open('meghla_ai.html', 'MeghlaAI', 'width=800,height=600,resizable=yes,scrollbars=yes');
+      if (!popup) {
+        alert('Popup blocked! Please allow popups for this site.');
+      }
+    });
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <footer style="color:#fff; padding:60px 30px; font-family:Arial, sans-serif;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; text-align:center;">
+      <div style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">
+        <h3 style="color:#a9a9a9; font-size:22px; margin-bottom:-30px;">Developer</h3>
+        <h1 style="color:#0055ff; font-size:35px; margin-bottom:5px;">ANON</h1>
+        <p style="color:#7b7b7b; font-size:14px; margin-bottom:5px; text-align:center;">
+          Always ready to learn and work on new technologies to deliver the best results.
+          Feel free to contact me for any development work, projects, or collaborations.
+          Thanks for visiting my site!
+        </p>
+      </div>
+      <div style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">
+        <h3 style="color:#a9a9a9; font-size:22px; margin-bottom:-30px;">Contact</h3>
+        <p style="font-size:15px; line-height:25px; color:#a9a9a9;">
+          <a href="https://wa.link/ylwtoy" target="_blank" style="color:#a9a9a9; text-decoration:none;">
+            <i class="fab fa-whatsapp" style="margin-right:10px;"></i> WhatsApp
+          </a><br>
+          <a href="https://github.com/harik90" target="_blank" style="color:#a9a9a9; text-decoration:none;">
+            <i class="fab fa-github" style="margin-right:10px;"></i> GitHub
+          </a><br>
+          <a href="https://pin.it/SDeB1nv4r" target="_blank" style="color:#a9a9a9; text-decoration:none;">
+            <i class="fab fa-pinterest" style="margin-right:10px;"></i> Pinterest
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <hr style="border:1px solid #333; margin:30px 0;">
+
+    <p style="color:#bbb; font-size:13px; margin-top:10px;">© 2025 Developer. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCFr3SUfBgaoxElcpa15qwRqx3kYy0xj1Y",
+      authDomain: "thehub-2bfbb.firebaseapp.com",
+      projectId: "thehub-2bfbb",
+      storageBucket: "thehub-2bfbb.firebasestorage.app",
+      messagingSenderId: "35761389806",
+      appId: "1:35761389806:web:363492696436c8167d33ff",
+      measurementId: "G-RXHZCHFC7T"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    function copyUPI() {
+      const upiURL = "upi://pay?pa=your-upi-id&pn=YourName";
+      navigator.clipboard.writeText(upiURL).then(() => {
+        alert("UPI URL copied to clipboard!");
+      }).catch(err => {
+        console.error("Failed to copy UPI URL: ", err);
+      });
+    }
+
+
+
+  </script>
+  <script src="scripts/animations.js"></script>
+</body>
+
+</html>
