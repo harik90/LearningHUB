@@ -18,7 +18,6 @@ async function sendMessage() {
   appendUserMessage(message);
   userInput.value = '';
   scrollChatContainer();
-
   showTypingIndicator();
 
   try {
@@ -70,57 +69,9 @@ function removeTypingIndicator() {
   }
 }
 
-async function generateAIResponse(message) {
-  try {
-    const response = await fetchAIResponse(message);
-    const responseText = response.candidates?.[0]?.content?.parts?.[0]?.text;
-
-    if (responseText) {
-      renderAIResponse(responseText);
-    } else {
-      showError('AI unable to generate a response.');
-    }
-  } catch (error) {
-    showError(error.message);
-  } finally {
-    removeTypingIndicator();
-  }
-}
-
-async function fetchAIResponse(message) {
-  const apiKey = 'ADD_YOUR_API_KEY';
-  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 10000);
-
-  try {
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: [{ text: message }] }] }),
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeout);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return response.json();
-  } catch (error) {
-    if (error.name === 'AbortError') {
-      throw new Error('Request timed out. Please try again.');
-    }
-    throw new Error('Network Error! Unable to fetch response.');
-  }
-}
-
 async function fetchGeminiAI(message) {
-  const apiKey = 'ADD_YOUR_API_KEY';
+  const apiKey = 'ADD_YOUR_API_KEY_DUDE';
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10000);
 
@@ -133,17 +84,12 @@ async function fetchGeminiAI(message) {
     });
 
     clearTimeout(timeout);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     const data = await response.json();
     return data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response from AI.';
   } catch (error) {
-    if (error.name === 'AbortError') {
-      throw new Error('Request timed out. Please try again.');
-    }
+    if (error.name === 'AbortError') throw new Error('Request timed out. Please try again.');
     throw new Error('Network Error! Unable to fetch response.');
   }
 }
@@ -151,17 +97,11 @@ async function fetchGeminiAI(message) {
 function renderAIResponse(text) {
   const aiBubble = document.createElement('div');
   aiBubble.className = 'ai-bubble';
-
   const parts = parseAndFormatText(text);
-
-  parts.forEach(part => {
-    aiBubble.appendChild(part);
-  });
-
+  parts.forEach(part => aiBubble.appendChild(part));
   chatContainer.appendChild(aiBubble);
   aiBubble.style.animation = 'slideUp 0.5s ease forwards';
   scrollChatContainer();
-
   Prism.highlightAll();
 
   aiBubble.querySelectorAll('.copy-btn').forEach(btn => {
@@ -177,8 +117,7 @@ function renderAIResponse(text) {
 function parseAndFormatText(text) {
   const parts = [];
   const codeRegex = /```(\w*)\n([\s\S]*?)```/g;
-  let lastIndex = 0;
-  let match;
+  let lastIndex = 0, match;
 
   while ((match = codeRegex.exec(text)) !== null) {
     const normalText = text.substring(lastIndex, match.index).trim();
@@ -190,7 +129,6 @@ function parseAndFormatText(text) {
 
     const language = match[1].trim() || 'plaintext';
     const codeContent = match[2].trim();
-
     const codeBlock = document.createElement('div');
     codeBlock.className = 'code-snippet';
     codeBlock.innerHTML = `
@@ -232,4 +170,3 @@ function showError(errorText) {
   chatContainer.appendChild(createMessageBubble('ai-bubble error', errorText));
   scrollChatContainer();
 }
-
