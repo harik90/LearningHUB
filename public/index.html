@@ -459,12 +459,11 @@
         floatingBtn.style.top = `${top}px`;
       }
     });
-
     document.addEventListener('mouseup', () => {
       isDragging = false;
     });
 
-    // Open meghla_ai.html in a popup on click
+  
     floatingBtn.addEventListener('click', () => {
       const popup = window.open('meghla_ai.html', 'MeghlaAI', 'width=800,height=600,resizable=yes,scrollbars=yes');
       if (!popup) {
@@ -506,43 +505,6 @@
 
     <p style="color:#bbb; font-size:13px; margin-top:10px;">© 2025 Developer. All rights reserved.</p>
   </footer>
-
-  <script>
-
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "firebase/app";
-    import { getAnalytics } from "firebase/analytics";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCFr3SUfBgaoxElcpa15qwRqx3kYy0xj1Y",
-      authDomain: "thehub-2bfbb.firebaseapp.com",
-      projectId: "thehub-2bfbb",
-      storageBucket: "thehub-2bfbb.firebasestorage.app",
-      messagingSenderId: "35761389806",
-      appId: "1:35761389806:web:363492696436c8167d33ff",
-      measurementId: "G-RXHZCHFC7T"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
-    function copyUPI() {
-      const upiURL = "upi://pay?pa=your-upi-id&pn=YourName";
-      navigator.clipboard.writeText(upiURL).then(() => {
-        alert("UPI URL copied to clipboard!");
-      }).catch(err => {
-        console.error("Failed to copy UPI URL: ", err);
-      });
-    }
-
-
-
-  </script>
   <script src="scripts/animations.js"></script>
 </body>
 
