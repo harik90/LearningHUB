@@ -30,8 +30,8 @@ Welcome to the **Open Source Computer Science Learning Hub** — your ultimate f
 - 🗣 **Live Chatbot** for real-time learning help
 - ✨ **AI-powered Recommendations** for best courses & tutorials
 
-### 🔗 **Try the Gemini AI Bot Now**
-[🔥 Launch Gemini AI Chatbot 🔥](https://thehub-2bfbb.web.app/meghla_ai.html)
+### 🔗 **Try the Meghla AI Bot Now**
+[🔥 Launch Meghla AI Chatbot 🔥](https://thehub-2bfbb.web.app/meghla_ai.html)
 
 ---
 
