@@ -1,0 +1,386 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 10px;
+}
+
+/* Code and pre styles */
+pre[class*="language-"], code[class*="language-"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+pre, code {
+  background: #262626;
+  color: #00e0ff;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Chat Container */
+.chat-container {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  margin: auto; /* Center horizontally and vertically */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+  border: 1px solid #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  scrollbar-width: thin; /* For Firefox: thin scrollbar */
+  scrollbar-color: #444 #1b1b1b; /* Thumb and track colors for Firefox */
+  max-height: auto; /* Limit height for better responsiveness */
+  height: auto; /* Automatically adjust height based on content */
+  transition: max-height 0.5s ease, height 0.5s ease; /* Smooth animation */
+}
+
+.chat-container.fullscreen {
+  max-height: calc(100vh - 100px); /* Fullscreen height minus input area */
+  height: calc(100vh - 100px); /* Fullscreen height minus input area */
+}
+
+/* User Bubble */
+.user-bubble {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #000000;
+  padding: 12px 18px;
+  border-radius: 15px 15px 5px 15px;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  font-size: 15px;
+  line-height: 1.6;
+  animation: slideUp 0.5s ease forwards;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+}
+
+/* AI Bubble */
+.ai-bubble {
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 15px 15px 15px 5px;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+  font-size: 15px;
+  line-height: 1.6;
+  animation: slideUp 0.5s ease forwards;
+  word-wrap: break-word;
+}
+
+/* Animations */
+@keyframes slideInRight {
+  0% { transform: translateX(50%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-50%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Chat Bubble Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-radius: 30px;
+  width: 100%; /* Ensure it spans the full width */
+  max-width: 1000px; /* Limit maximum width */
+  margin: 10px auto;
+  box-shadow: none; /* Removed shadow */
+  background: transparent; /* Removed background */
+  border: none; /* Removed border */
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+#user-input {
+  flex: 1;
+  background: transparent;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+  transition: background 0.3s ease, border 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  min-height: 50px; /* Ensure usability on smaller screens */
+  width: 100%; /* Ensure it spans the full width of the input area */
+}
+
+#user-input:focus {
+  background: #333333;
+  border-color: #00ffa2;
+}
+
+#send-btn {
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #00ffa2, #00d88e);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#send-btn:hover {
+  background: linear-gradient(135deg, #00d88e, #00ffa2);
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+#send-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Code Snippet Styling */
+.code-snippet {
+  background: #262626;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  border: 1px solid #444;
+}
+
+.code-header {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.code-snippet pre {
+  padding: 10px;
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  background: #444;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.copy-btn:hover {
+  background-color: #00ff88;
+  color: #000;
+}
+
+/* Typing Animation */
+.typing {
+  width: 80px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.typing span {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1b1b; /* Darker track background */
+  border-radius: 12px; /* Fully rounded track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444; /* Dark gray thumb */
+  border-radius: 12px; /* Fully rounded thumb */
+  border: 2px solid #1b1b1b; /* Space between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter gray on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #666; /* Even lighter gray on active */
+}
+
+/* Custom Scrollbar for Code Snippets */
+.code-snippet::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.code-snippet::-webkit-scrollbar-track {
+  background: #1b1b1b; /* Darker track background */
+  border-radius: 10px; /* Fully rounded track */
+}
+
+.code-snippet::-webkit-scrollbar-thumb {
+  background: #444; /* Dark gray thumb */
+  border-radius: 10px; /* Fully rounded thumb */
+  border: 2px solid #1b1b1b; /* Space between thumb and track */
+}
+
+.code-snippet::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter gray on hover */
+}
+
+.code-snippet::-webkit-scrollbar-thumb:active {
+  background: #666; /* Even lighter gray on active */
+}
+
+/* Custom Scrollbar for Code Snippets */
+.code-snippet pre::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.code-snippet pre::-webkit-scrollbar-track {
+  background: #1b1b1b; /* Darker track background */
+  border-radius: 12px; /* Fully rounded track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.code-snippet pre::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #444, #666); /* Gradient for the thumb */
+  border-radius: 12px; /* Fully rounded thumb */
+  border: 2px solid #1b1b1b; /* Space between thumb and track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.code-snippet pre::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #666, #888); /* Lighter gradient on hover */
+}
+
+.code-snippet pre::-webkit-scrollbar-thumb:active {
+  background: #888; /* Solid color on active */
+}
+
+/* Scrollbar for Code Snippets (Firefox) */
+.code-snippet pre {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #444 #1b1b1b; /* Thumb and track colors */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 10px;
+    border: none;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #send-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .user-bubble, .ai-bubble {
+    max-width: 90%;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    padding: 10px;
+    border: none;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #send-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .user-bubble, .ai-bubble {
+    max-width: 90%;
+    padding: 10px 15px;
+  }
+}
+
+/* Focus styles for accessibility */
+#user-input:focus, #send-btn:focus {
+  outline: 2px solid #00ffa2;
+  outline-offset: 2px;
+}

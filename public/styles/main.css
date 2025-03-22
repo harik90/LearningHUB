@@ -684,3 +684,84 @@ footer div {
     box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
     border-color: #4CAF50;
 }
+
+.try-meghla-btn {
+
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #4CAF50, #03A9F4);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.try-meghla-btn:hover {
+    background: linear-gradient(45deg, #03A9F4, #4CAF50);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.floating-btn {
+    width: 60px; /* Adjusted size for better visibility */
+    height: 60px;
+    background: linear-gradient(135deg, #4CAF50, #03A9F4, #FFC107);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.floating-btn:hover {
+    background: linear-gradient(135deg, #FFC107, #03A9F4, #4CAF50);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.floating-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.floating-btn:hover::after {
+    opacity: 1;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+    .floating-btn {
+        width: 50px; /* Smaller size for mobile */
+        height: 50px;
+        bottom: 15px; /* Adjusted position */
+        right: 15px;
+    }
+
+    .floating-btn i {
+        font-size: 20px; /* Adjusted icon size */
+    }
+}
