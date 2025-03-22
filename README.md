@@ -90,5 +90,3 @@ git clone https://github.com/harik90/LearningHUB.git
 ✅ **Learn | Code | Explore AI | Grow | Contribute — Together we build the best Computer Science Knowledge Hub.** ✅
 
 ---
-
-### 💡 Let me know if you need **HTML version**, **AI Tools web section design**, or **Gemini API integration code** next!
